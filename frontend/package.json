@@ -27,6 +27,9 @@
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },
+  "babel": {
+    "presets": ["@vue/cli-plugin-babel/preset"]
+  },
   "eslintConfig": {
     "root": true,
     "env": {
