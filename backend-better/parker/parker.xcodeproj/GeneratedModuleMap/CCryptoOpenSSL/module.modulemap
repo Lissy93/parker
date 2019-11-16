@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/oliverpoole/Development Projects/Hackathons/Parker/backend-better/parker/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
+    export *
+}
