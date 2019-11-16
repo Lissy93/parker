@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/oliverpoole/Development Projects/Hackathons/Parker/backend-better/parker/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
+    export *
+}
