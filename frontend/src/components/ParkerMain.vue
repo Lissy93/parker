@@ -85,6 +85,7 @@ export default {
   z-index: 1;
   background: inherit;
   overflow: hidden;
+  display: inline-block;
 
   &:before {
     content: '';

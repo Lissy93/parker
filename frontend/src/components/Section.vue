@@ -19,6 +19,7 @@ section {
   padding: 1em;
 
   .card {
+    padding: 1em;
     border-radius: 12px;
     background: #ffffff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
