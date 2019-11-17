@@ -1,7 +1,7 @@
 <template>
   <div class="parker">
     <h2>Parker</h2>
-    <Results companyName="Facebook" :results="data" />
+    <Results companyName="Facebook" :resultsRed="redData" :resultsAmber="amberData" />
     <Error v-if="isError" />
   </div>
 </template>
@@ -14,16 +14,24 @@ const fakeData = [
   {
     id: 1,
     icon: '',
-    permission: 'IP Address',
-    reason: 'Your IP address is recorded and logged to determin country',
+    permission: 'Media',
+    reason: 'This website may record, store and access your video and audio files.',
     additionalDetails: '',
   },
   {
     id: 2,
     icon: '',
-    permission: 'Location',
+    permission: 'Files',
     reason:
-      'Your location is refered from your browser and IP address, and is used to show nearby businesses',
+      'By using this website you may be granting access to your device’s file system, such as documents, photos and media files',
+    additionalDetails: '',
+  },
+  {
+    id: 4,
+    icon: '',
+    permission: 'Camera',
+    reason:
+      'The phone number you specified during sign up, is stored to unlock your account in the case of forgotten credentials',
     additionalDetails: '',
   },
   {
@@ -34,20 +42,39 @@ const fakeData = [
       'The phone number you specified during sign up, is stored to unlock your account in the case of forgotten credentials',
     additionalDetails: '',
   },
+];
+
+const fakeDataAmber = [
   {
-    id: 4,
+    id: 1,
     icon: '',
-    permission: 'Webcam',
+    permission: 'Marketing',
     reason:
-      'An unencrypted 24 hr live feed from all your cameras will be broadcasted on the internet',
+      'By signing up to this website be aware that you may receive marketing materials from them in the future',
     additionalDetails: '',
   },
   {
-    id: 5,
+    id: 2,
     icon: '',
-    permission: 'Full Name',
+    permission: 'IP Address',
     reason:
-      'After the sign up process is complete, this company will legally own all rights to your full name',
+      'This application accesses your computer’s unique address to identify your device from others.',
+    additionalDetails: '',
+  },
+  {
+    id: 3,
+    icon: '',
+    permission: 'Marketing',
+    reason:
+      'By signing up to this website be aware that you may receive marketing materials from them in the future',
+    additionalDetails: '',
+  },
+  {
+    id: 4,
+    icon: '',
+    permission: 'IP Address',
+    reason:
+      'This application accesses your computer’s unique address to identify your device from others.',
     additionalDetails: '',
   },
 ];
@@ -61,7 +88,8 @@ export default {
         title: null,
         body: null,
       },
-      data: fakeData,
+      redData: fakeData,
+      amberData: fakeDataAmber,
     };
   },
   components: {

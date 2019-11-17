@@ -2,7 +2,7 @@
   <article>
     <h2>Here's what you need to know from {{ companyName }}'s' Privacy Policy</h2>
     <Section class="results bad-results" title="🔴 5 Critical Results">
-      <div v-for="result in results" :key="result.id">
+      <div v-for="result in resultsRed" :key="result.id">
         <div class="result-row">
           <div class="cell icon">{{ result.icon }}</div>
           <div class="cell permission">{{ result.permission }}</div>
@@ -12,7 +12,7 @@
       </div>
     </Section>
     <Section class="results bad-results" title="⚠️ 2 Warning Results">
-      <div v-for="result in results" :key="result.id">
+      <div v-for="result in resultsAmber" :key="result.id">
         <div class="result-row">
           <div class="cell icon">{{ result.icon }}</div>
           <div class="cell permission">{{ result.permission }}</div>
@@ -44,7 +44,8 @@ export default {
   },
   props: {
     companyName: String,
-    results: Array,
+    resultsAmber: Array,
+    resultsRed: Array,
   },
 };
 </script>
@@ -52,6 +53,7 @@ export default {
 <style lang="scss" scoped>
 article {
   display: inline-block;
+  vertical-align: top;
 }
 
 .results {
