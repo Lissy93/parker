@@ -19,7 +19,7 @@ The Frontend is just simple a Vue app,  (Babel, Webpack, Core-js and Sass with e
 
 This screenshot is of the kids version:
 
-![parker-screenshot](parker-screeenshot.gif)
+![parker-screenshot](parker-screenshot.gif)
 
 
 ## About
